@@ -1,37 +1,44 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {LinkContainer} from 'react-router-bootstrap'
+import { NavLink } from "react-router-dom";
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+import { useState } from 'react';
 
 import logo from '../../assets/logo-transparent.png';
 import './Header.css';
 
 export default function Header() {
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
+
+  const handleClose = () => setShowOffcanvas(false);
+  const handleShow = () => setShowOffcanvas(true);
+
   return (
     <header>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="/"><img id='logo' src={logo} alt='logo'/></Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav'/>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <LinkContainer to="/">
-                <Nav.Link>Home</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/pet-insurance">
-                <Nav.Link>Pet Insurance</Nav.Link>
-              </LinkContainer>
-              <LinkContainer to="/about">
-                <Nav.Link>About Us</Nav.Link>
-              </LinkContainer>
-              {/* <Nav.Link href='/pet-insurance'>Pet Insurance</Nav.Link>
-              <Nav.Link href='/about'>About Us</Nav.Link> */}
-            </Nav>
-          </Navbar.Collapse>
+      <Navbar expand="lg">
+        <Container fluid>
+          <Navbar.Brand href="/">
+            <img id='logo' src={logo} alt='logo'/>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls='offcanvasNavbar-expand-lg' onClick={handleShow}/>
+          <Navbar.Offcanvas show={showOffcanvas} onHide={handleClose} id="offcanvasNavbar-expand-lg" aria-labelledby='offcanvasNavbarLabel-expand' placement="end">
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id='offcanvasNavbarLabel-expand-lg'>
+                <img id='logo-offcanvas' src={logo} alt='logo'/>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <NavLink className="nav-link" to="/" onClick={handleClose}>Home</NavLink>
+                <NavLink className="nav-link" to="/pet-insurance" activeClassName="active" onClick={handleClose}>Pet Insurance</NavLink>
+                <NavLink className="nav-link" to="/about" activeClassName="active" onClick={handleClose}>About Us</NavLink>
+              </Nav>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
         </Container>
       </Navbar>
-
-      
     </header>
   )
 }

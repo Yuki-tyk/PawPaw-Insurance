@@ -1,0 +1,34 @@
+header {
+    background: var(--LIGHT-HIGHLIGHT-COLOR);
+    padding: 5px 10px 5px 5px;
+    font-weight: bold;
+}
+
+#logo {
+    width: 300px;
+    height: auto;
+}
+
+#logo-offcanvas {
+    width: 250px;
+}
+
+.nav-link {
+    color: var(--GREY);
+    padding-right: 50px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-link:hover {
+    color: var(--DARK-HIGHLIGHT-COLOR);
+}
+
+.nav-link.active:hover {
+    color: var(--DARK-HIGHLIGHT-COLOR);
+}
