@@ -1,5 +1,5 @@
 header {
-    background: var(--LIGHT-HIGHLIGHT-COLOR);
+    background: var(--HIGHLIGHT-COLOR);
     padding: 5px 10px 5px 5px;
     font-weight: bold;
 }
@@ -31,4 +31,18 @@ header {
 
 .nav-link.active:hover {
     color: var(--DARK-HIGHLIGHT-COLOR);
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        width: 200px;
+    }
+
+    #logo-offcanvas {
+        width: 150px;
+    }
+
+    .nav-link {
+        padding-right: 20px;
+    }
 }

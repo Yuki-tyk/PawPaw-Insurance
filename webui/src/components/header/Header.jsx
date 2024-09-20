@@ -20,13 +20,13 @@ export default function Header() {
       <Navbar expand="lg">
         <Container fluid>
           <Navbar.Brand href="/">
-            <img id='logo' src={logo} alt='logo'/>
+            <img id='logo' src={logo} alt='Logo'/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='offcanvasNavbar-expand-lg' onClick={handleShow}/>
           <Navbar.Offcanvas show={showOffcanvas} onHide={handleClose} id="offcanvasNavbar-expand-lg" aria-labelledby='offcanvasNavbarLabel-expand' placement="end">
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id='offcanvasNavbarLabel-expand-lg'>
-                <img id='logo-offcanvas' src={logo} alt='logo'/>
+                <img id='logo-offcanvas' src={logo} alt='Logo'/>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

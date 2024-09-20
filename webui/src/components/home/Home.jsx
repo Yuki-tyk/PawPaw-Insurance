@@ -1,7 +1,9 @@
-import React from 'react'
+import Hero from '../hero/Hero';
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div>
+      <Hero />
+    </div>
   )
 }

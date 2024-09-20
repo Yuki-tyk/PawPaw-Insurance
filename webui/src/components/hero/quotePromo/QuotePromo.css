@@ -1,0 +1,36 @@
+#quote-promo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--LIGHT-HIGHLIGHT-COLOR);
+    border-radius: 40px;
+    padding: 1.5rem 1.25rem 1rem 1.25rem;
+    /* margin: auto 1rem; */
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+em {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#btn-group{
+    display: flex;
+    gap: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #quote-table-container {
+        padding: 1.25rem 1rem 0.75rem 1rem;
+        margin: 0;
+    }
+    h6 {
+        font-size: 1.1rem;
+    }
+    
+}
