@@ -61,6 +61,11 @@ body {
   background-color: var(--BGCOLOR);
 }
 
+em {
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* 
 a {
   font-weight: 500;

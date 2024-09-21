@@ -1,32 +1,43 @@
+// Bootstrap
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+import './App.css'
 
 // Layout
-import Layout from './components/Layout'
+import Layout from './pages/Layout'
 
 // Pages
-import Home from './components/home/Home'
-import PetInsurance from './components/petInsurance/PetInsurance'
-import About from './components/about/About'
+import Home from './pages/home/Home'
+import PetInsurance from './pages/petInsurance/PetInsurance'
+import About from './pages/about/About'
 
 function App() {
   // const [count, setCount] = useState(0)
 
+  const theme = createTheme({
+    palette: {
+      green: {
+        main: '#1ac08c',
+        light: '#c7eddf',
+        dark: '#1ac08c',
+        contrastText: '#fff',
+      },
+    },
+  });
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path='pet-insurance' element={<PetInsurance/>}/>
-          <Route path="about" element={<About/>}/>
-        </Route>
-      </Routes>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout/>}>
+            <Route index element={<Home/>}/>
+            <Route path='pet-insurance' element={<PetInsurance/>}/>
+            <Route path="about" element={<About/>}/>
+          </Route>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   )
 }
 

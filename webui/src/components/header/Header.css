@@ -2,6 +2,9 @@ header {
     background: var(--HIGHLIGHT-COLOR);
     padding: 5px 10px 5px 5px;
     font-weight: bold;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
 }
 
 #logo {

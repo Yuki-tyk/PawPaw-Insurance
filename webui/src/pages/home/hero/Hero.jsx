@@ -10,7 +10,7 @@ export default function Hero() {
       </div>
       <div id='intro-right'>
         <QuoteTable />
-        <img id='owner-with-pets-img' src='src/assets/owner-with-pets.svg' alt='Owner with pets'></img>
+        <img id='owner-with-pets-img' src='src/assets/owner-with-pets.svg' alt='Owner with pets' />
       </div>
     </div>
   )
