@@ -31,9 +31,9 @@ export default function Header() {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink className="nav-link" to="/" onClick={handleClose}>Home</NavLink>
-                <NavLink className="nav-link" to="/pet-insurance" activeClassName="active" onClick={handleClose}>Pet Insurance</NavLink>
-                <NavLink className="nav-link" to="/about" activeClassName="active" onClick={handleClose}>About Us</NavLink>
+                <NavLink className="nav-link" to="/" activeClassName="active" onClick={handleClose}>Pet Insurance</NavLink>
+                <NavLink className="nav-link" to="/about-us" activeClassName="active" onClick={handleClose}>About Us</NavLink>
+                <NavLink className="nav-link" to="/contact-us" activeClassName="active" onClick={handleClose}>Contact Us</NavLink>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>

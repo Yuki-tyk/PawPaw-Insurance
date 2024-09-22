@@ -8,9 +8,9 @@ import './App.css'
 import Layout from './pages/Layout'
 
 // Pages
-import Home from './pages/home/Home'
 import PetInsurance from './pages/petInsurance/PetInsurance'
-import About from './pages/about/About'
+import AboutUs from './pages/aboutUs/AboutUs'
+import ContactUs from './pages/contactUs/ContactUs'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,10 +18,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path='pet-insurance' element={<PetInsurance/>}/>
-          <Route path="about" element={<About/>}/>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<PetInsurance />}/>
+          <Route path="about-us" element={<AboutUs />}/>
+          <Route path='contact-us' element={<ContactUs />}/>
         </Route>
       </Routes>
     </Router>
