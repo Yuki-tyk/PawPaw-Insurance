@@ -1,6 +1,6 @@
 # PawPaw Insurance
 
-## To run the app
+## To build and run the app
 ```
-npm run dev
+npm install && npm run dev
 ```
