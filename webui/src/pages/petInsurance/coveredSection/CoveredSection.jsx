@@ -3,7 +3,7 @@ import './CoveredSection.css';
 export default function CoveredSection() {
   return (
     <div id='covered-section'>
-        <h2 className='covered-explain-header'>What is covered?</h2>
+        <h2 id='covered-header'>What is covered?</h2>
         <div id='covered-list'>
           <div className='covered-item'>
             <img className='covered-item-img' src='src/assets/accident-and-illness.svg' alt='Accident & Illness Image'/>
