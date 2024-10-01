@@ -22,6 +22,10 @@ header {
     border-radius: 50px;
 }
 
+#nav-link-quote:hover {
+    opacity: 0.9;
+}
+
 .nav-group {
     display: flex;
     justify-content: end;
@@ -52,7 +56,7 @@ header {
 }
 
 .offcanvas-toggle:hover {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 991px) {
@@ -81,8 +85,17 @@ header {
         order: -1;
     }
 
+    #nav-link-quote {
+        padding: 9px 15px;
+        font-size: 1rem;
+    }
+
     .nav-link {
         padding-right: 20px;
         margin-right: 0;
+    }
+
+    .offcanvas-toggle {
+        padding: 8px;
     }
 }
